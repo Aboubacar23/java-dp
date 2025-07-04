@@ -25,6 +25,8 @@ public class TypeReservation {
      */
     private double montant;
 
+    private double prixUnitaire;
+
     /**
      * reduction en % uniquement pour les clients premium
      */
@@ -38,6 +40,14 @@ public class TypeReservation {
         super();
         this.type = type;
         this.montant = montant;
+        this.reductionPourcent = reductionPourcent;
+    }
+
+    public TypeReservation(String type, double montant, double prixUnitaire, double reductionPourcent) {
+        super();
+        this.type = type;
+        this.montant = montant;
+        this.prixUnitaire = prixUnitaire;
         this.reductionPourcent = reductionPourcent;
     }
 
@@ -112,4 +122,13 @@ public class TypeReservation {
     public void setReductionPourcent(double reductionPourcent) {
         this.reductionPourcent = reductionPourcent;
     }
+
+    public double getPrixUnitaire() {
+        return prixUnitaire;
+    }
+
+    public void setPrixUnitaire(double prixUnitaire) {
+        this.prixUnitaire = prixUnitaire;
+    }
 }
+

@@ -80,4 +80,10 @@ public class Client {
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
     }
+
+
+    //ajouter addReservation sur la classe
+    public void addReservation(Reservation reservation) {
+        this.reservations.add(reservation);
+    }
 }

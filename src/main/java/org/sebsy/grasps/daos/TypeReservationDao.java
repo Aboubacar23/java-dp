@@ -17,4 +17,5 @@ public class TypeReservationDao {
         }
         return null;
     }
+
 }

@@ -18,6 +18,8 @@ public class Reservation {
 
     private double total;
 
+    private double montantTotal;
+
     @ManyToOne
     @JoinColumn(name = "ID_CLIENT")
     private Client client;
@@ -26,9 +28,29 @@ public class Reservation {
 
     }
 
+    public Reservation(LocalDateTime date, int nbPlaces, double total, Client client, double montantTotal) {
+        this.date = date;
+        this.nbPlaces = nbPlaces;
+        this.total = total;
+        this.client = client;
+        this.montantTotal = montantTotal;
+    }
+
+    public Reservation(LocalDateTime date, int nbPlaces, double total) {
+        this.date = date;
+        this.nbPlaces = nbPlaces;
+        this.total = total;
+    }
+
     public Reservation(LocalDateTime date) {
         super();
         this.date = date;
+    }
+
+    public Reservation(LocalDateTime date, String type, int nbPlaces, double montant) {
+        this.date = date;
+        this.nbPlaces = nbPlaces;
+        this.total = montant;
     }
 
     /**
