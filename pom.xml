@@ -35,6 +35,13 @@
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
 
+		<!-- JUnit for Testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.1</version>
+			<scope>test</scope>
+		</dependency>
 		<!-- API JPA -->
 		<dependency>
 			<groupId>javax.persistence</groupId>
